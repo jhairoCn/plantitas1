@@ -6,7 +6,8 @@ import jakarta.persistence.GenerationType;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
+import java.util.List;
+import com.plantitas.plantitas1.model.Usuario;
 
 @Data
 @AllArgsConstructor

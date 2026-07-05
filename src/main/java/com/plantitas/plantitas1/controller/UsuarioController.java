@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import com.plantitas1.plantitas1.service.UsuarioService;   
 import java.util.List;
 import com.plantitas1.plantitas1.model.Usuario;
-import io.swagger.v3.oas.annotations.parameters.RequestBody;
+
 
 
 @RestController
