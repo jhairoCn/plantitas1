@@ -6,6 +6,6 @@ import org.springframework.stereotype.Service;
 import com.plantitas1.plantitas1.repository.UsuarioRepository;
 import com.plantitas1.plantitas1.model.Usuario;
 
-public interface UsuarioRepository extends JpaRepository<Usuario, Long>{
+public interface UsuarioRepository extends JpaRepository< Usuario, Long>{
 
 }
