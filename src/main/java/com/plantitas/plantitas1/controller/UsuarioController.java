@@ -1,4 +1,4 @@
-package com.plantitas1.plantitas1.controller;
+package com.plantitas.plantitas1.controller;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -7,9 +7,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
-import com.plantitas1.plantitas1.service.UsuarioService;   
+import com.plantitas.plantitas1.service.UsuarioService;
 import java.util.List;
-import com.plantitas1.plantitas1.model.Usuario;
+import com.plantitas.plantitas1.model.Usuario;
 
 
 

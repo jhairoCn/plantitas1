@@ -1,4 +1,4 @@
-package com.plantitas1.plantitas1.model;
+package com.plantitas.plantitas1.model;
 
 import jakarta.persistence.Id;
 import jakarta.persistence.Entity;

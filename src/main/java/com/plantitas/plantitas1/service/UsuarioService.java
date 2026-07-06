@@ -1,7 +1,7 @@
-package com.plantitas1.plantitas1.service;
+package com.plantitas.plantitas1.service;
 
-import com.plantitas1.plantitas1.model.Usuario; 
-import com.plantitas1.plantitas1.repository.UsuarioRepository;
+import com.plantitas.plantitas1.model.Usuario;
+import com.plantitas.plantitas1.repository.UsuarioRepository;
 import org.springframework.stereotype.Service;
 import java.util.List; 
 
