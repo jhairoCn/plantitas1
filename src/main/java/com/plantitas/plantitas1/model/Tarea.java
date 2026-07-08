@@ -11,44 +11,37 @@ import jakarta.persistence.JoinColumn;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "usuarios")
-public class Usuario {
+@Table(name = "tareas")
+public class Tarea {
     
     @Id  
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     
-    @Column(nullable = false, length = 100)
-    private String nombre;
-
-    @Column(name = "correo_electronico", nullable = false, unique = true, length = 150)
-    private String correoElectronico;    
-
-    @Column(name = "hash_de_contrasena", nullable = false, length = 255)
-    private String hashDeContrasena;    
-
     @ManyToOne
-    @JoinColumn(name = "id_de_rol")
-    private Rol rol;
-
+    @JoinColumn(name = "id_de_planta", nullable = false)
+    private Planta planta;
+    
+    @Column(name = "tipo_de_tarea", length = 50)
+    private String tipoDeTarea = "Riego";
+    
+    @Column(name = "fecha_programada", nullable = false)
+    private LocalDate fechaProgramada;
+    
     @Column(length = 50)
-    private String plan = "Gratuito";
-
-    @Column(length = 50)
-    private String estado = "Activo";
-
-    @Column(name = "avatar_url", columnDefinition = "TEXT")
-    private String avatarUrl = "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=200&auto=format&fit=crop&q=60";
-
+    private String estado = "Pendiente";
+    
+    @Column(name = "completado_en")
+    private LocalDateTime completadoEn;
+    
     @Column(name = "creado_en")
     private LocalDateTime creadoEn = LocalDateTime.now();
     
 }
-
-
