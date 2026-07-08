@@ -32,9 +32,6 @@ public class Planta {
     @Column(nullable = false, length = 100)
     private String nombre;
     
-    @Column(name = "id_de_especie", length = 50)
-    private String idDeEspecie;
-    
     @Column(name = "nombre_especie", nullable = false, length = 100)
     private String nombreEspecie;
     

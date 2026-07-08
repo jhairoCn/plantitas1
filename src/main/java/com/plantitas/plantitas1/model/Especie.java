@@ -9,26 +9,31 @@ import jakarta.persistence.Column;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import java.time.LocalDateTime;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "registros_del_sistema")
-public class RegistroSistema {
+@Table(name = "especies")
+public class Especie {
     
     @Id  
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     
-    @Column(length = 50)
-    private String nivel = "INFO";
+    @Column(nullable = false, unique = true, length = 100)
+    private String nombre;
     
-    @Column(nullable = false, columnDefinition = "TEXT")
-    private String mensaje;
+    @Column(name = "nombre_cientifico", length = 150)
+    private String nombreCientifico;
     
-    @Column(name = "creado_en")
-    private LocalDateTime creadoEn = LocalDateTime.now();
+    @Column(name = "frecuencia_de_riego", nullable = false)
+    private Integer frecuenciaDeRiego;
+    
+    @Column(name = "luz_recomendada", length = 100)
+    private String luzRecomendada;
+    
+    @Column(name = "temperatura_ideal", length = 50)
+    private String temperaturaIdeal;
     
 }
